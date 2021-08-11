@@ -6,6 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     -
+      name: Docker meta
+      id: meta
+      uses: docker/metadata-action@v3
+      with:
+        images: pcuesta90/cicd
+    -
       name: Login to DockerHub
       uses: docker/login-action@v1 
       with:
@@ -16,6 +22,5 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        path: ./Dockerfile
         push: true
         tags: ${{ github.sha }}
