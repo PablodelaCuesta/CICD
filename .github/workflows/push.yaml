@@ -27,3 +27,5 @@ jobs:
         context: .
         push: true
         tags: ${{ github.sha }}
+        username: ${{ secrets.DOCKER_USER }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
