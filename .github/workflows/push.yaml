@@ -17,4 +17,5 @@ jobs:
       with:
         context: .
         push: true
+        load: true
         tags: ${{ github.sha }}
