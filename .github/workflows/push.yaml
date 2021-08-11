@@ -16,6 +16,6 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
+        path: ./Dockerfile
         push: true
-        load: true
         tags: ${{ github.sha }}
